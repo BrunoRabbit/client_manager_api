@@ -20,3 +20,6 @@ O script irá gerar `config/default.json` e criar o banco de dados com a tabela 
 Execute o backend
 
     nodemon main.ts
+
+
+Projeto feito com :heart: para concorrer a uma vaga para a empresa Grupo Ignição Digital
