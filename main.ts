@@ -5,7 +5,7 @@ import config from 'config';
 import routerClient from './api/index';
 
 const corsOptions : CorsOptions = {
-  origin: `http://localhost:8080`,
+  origin: `http://localhost:3000`,
   optionsSuccessStatus: 200
 }
 
