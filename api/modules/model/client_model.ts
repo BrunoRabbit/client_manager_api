@@ -14,6 +14,13 @@ class Client extends Model {
     set tagsArray(val: string[]) {
         this.tags = val.join(';');
     }
+
+    toJSON() {
+        const values = Object.assign({}, this.get());
+        values.tags = this.tagsArray;
+
+        return values;
+    }
 }
 
 Client.init({

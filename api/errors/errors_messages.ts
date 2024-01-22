@@ -8,5 +8,4 @@ export const messages = {
     clientNotFound: 'Cliente não encontrado',
     dataToUpdateNotRecived: 'Dados para atualizar não encontrados',
     emailUsed: 'Email ja em uso',
-    sameEmail: 'O novo email não pode ser igual ao email anterior'
 }

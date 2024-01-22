@@ -19,7 +19,7 @@ class ClientsController extends DefaultController {
     async createClient(req: Request, res: Response) {
         return this.handleRequest(async () => await this.clientService.createClient(req.body), req, res);
     }
-    
+
     async deleteClient(req: Request, res: Response) {
         return this.handleRequest(async () => await this.clientService.deleteClient(+req.params.idClient), req, res);
     }

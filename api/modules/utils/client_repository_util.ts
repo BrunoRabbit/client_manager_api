@@ -5,9 +5,6 @@ import Client from '../model/client_model';
 
 class ClientRepositoryUtil {
     static async checkIfEmailBelongsToDiffClient(email: string, idClient: number, oldEmail: string) {
-        if (email === oldEmail) {
-            throw new ErrorGenerator(400, messages.sameEmail);
-        }
         if (email) {
             const existingClient = await Client.findOne({ where: { email } });
 
