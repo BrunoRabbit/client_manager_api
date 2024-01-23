@@ -3,8 +3,9 @@ Projeto feito com ❤️ para concorrer a uma vaga para a empresa Grupo Igniçã
 # ClientManagerApi
 
 Api simples feita em Node com Typescript e algumas bibliotecas externas como Sequelize e Express, e utilizando como banco de dados o MySQL.
+
 <!-- **Nota:** É necessario ter instalado o MySQL Workbench. -->
-<!-- 
+<!--
 
 ## Etapas para iniciar o projeto com Docker
 
@@ -15,7 +16,7 @@ Construa a imagem
 Inicialize o Docker
 
     docker run -p 3000:3000 client_manager_api -->
-    
+
 ## Etapas para iniciar o projeto
 
 Instale as dependencias
@@ -38,7 +39,6 @@ Deixei um arquivo json do Insomnia com as rotas e as variaveis de ambiente. Caso
 
 Url base para cada operação http é `http://localhost:3000/api/client`
 
-
 GET - http://localhost:3000/api/client
 
 Exemplo de retorno:
@@ -47,6 +47,30 @@ Exemplo de retorno:
         "status_code": 200,
         "data": []
     }
+
+<hr>
+
+GET - BUSCAR USUARIOS http://localhost:3000/api/client?name=bruno
+
+Realiza a busca onde verifica se "name", "email" e "tags" se encaixa na string bruno
+
+Exemplo de retorno:
+
+    {
+        "status_code": 200,
+        "data": [
+            {
+    		"id": 16,
+    		"name": "Bruno",
+    		"email": "umemail@email.com",
+    		"tags": [
+    			"data1",
+    			"data2"
+    		]
+    	}
+        ]
+    }
+
 <hr>
 
 POST - http://localhost:3000/api/client
@@ -63,7 +87,6 @@ Exemplo de Body:
     }
 
 <hr>
-
 
 PUT - http://localhost:3000/api/client/idClient
 
@@ -82,7 +105,7 @@ Exemplo de Body:
 
 DELETE - http://localhost:3000/api/client/idClient
 
-Exemplo de retorno: 
+Exemplo de retorno:
 
     {
         "status_code": 200,
