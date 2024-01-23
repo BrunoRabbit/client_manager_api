@@ -2,10 +2,20 @@ Projeto feito com ❤️ para concorrer a uma vaga para a empresa Grupo Igniçã
 
 # ClientManagerApi
 
-Api simples feita em Node com Typescript e algumas bibliotecas externas como Sequelize e Express.
+Api simples feita em Node com Typescript e algumas bibliotecas externas como Sequelize e Express, e utilizando como banco de dados o MySQL.
+<!-- **Nota:** É necessario ter instalado o MySQL Workbench. -->
+<!-- 
 
-**Nota:** Para ter o banco de dados é necessario ter o MySQL WorkBench.
+## Etapas para iniciar o projeto com Docker
 
+Construa a imagem
+
+    docker build -t client_manager_api .
+
+Inicialize o Docker
+
+    docker run -p 3000:3000 client_manager_api -->
+    
 ## Etapas para iniciar o projeto
 
 Instale as dependencias
@@ -45,7 +55,7 @@ Exemplo de Body:
 
     {
         "name": "Bruno",
-        "email": "meuemailformoso",
+        "email": "meuemailformoso@out.com",
         "tags": [
             "Tag01",
             "Tag02"
@@ -61,7 +71,7 @@ Exemplo de Body:
 
     {
         "name": "Bruno",
-        "email": "meuemailformoso",
+        "email": "meuemailformoso@out.com",
         "tags": [
             "Tag01",
             "Tag02"

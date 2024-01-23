@@ -1,5 +1,5 @@
 FROM node:18
-WORKDIR /usr/src/app
+WORKDIR /home/node/app
 COPY package*.json ./
 
 RUN npm install
@@ -8,8 +8,9 @@ RUN npm install -g ts-node
 COPY . .
 
 RUN ts-node setup.ts
-RUN npm run
+
+COPY config/default.json config/
 
 EXPOSE 3000
 
-CMD [ "node", "dist/main.ts" ]
+CMD ["npx", "nodemon", "main.ts"]
